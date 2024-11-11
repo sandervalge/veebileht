@@ -1,2 +1,2 @@
 # veebileht
-Repositoorium veebilehe projekti jaoks
+Repositoorium veebilehe projekti jaoks. Grupis g9NhG on Sander Valge ja Gris-Markus Reinesberg.
