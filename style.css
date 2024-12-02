@@ -1,0 +1,68 @@
+body {
+    display: flex;
+    background-color: beige;
+}
+.hidden {
+    display: none;
+}
+.sidebar {
+    width: 15%;
+    padding: 20px;
+    border: 5px solid rgb(94, 46, 46);
+    border-radius: 15px;
+}
+.main {
+    flex-grow: 1;
+    padding: 20px;
+}
+#results > div:not(.hidden) {
+    border: 5px solid rgb(72, 36, 36);
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: chocolate;
+    font-size: 30px;
+    margin-bottom: 10px; /* Add spacing below the main title */
+}
+h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: firebrick;
+    font-size: 25px;
+    margin-bottom: 10px; /* Add spacing below the heading */
+    text-align: center;
+}
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: indianred;
+    font-size: 20px;
+    margin-bottom: 10px; /* Add spacing below paragraphs */
+}
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkred;
+    font-size: 20px;
+    margin-bottom: 10px; /* Add spacing below the link */
+}
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: indianred;
+    font-size: 20px;
+}
+
+/* Remove the 'display: flex;' from this block */
+#results > div img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 10px; /* Add spacing above the image */
+    align-items: center;
+}
