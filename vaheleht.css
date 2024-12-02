@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    background-image: url(https://t3.ftcdn.net/jpg/05/17/54/92/360_F_517549233_fjVR9Kt1GlQqtvsGjb1ThVZAwa3gUviE.jpg);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+div {
+    border: 5px solid rgb(72, 36, 36);
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    outline-style: solid;
+    outline-color: brown;
+    background-color: rgb(117, 56, 56);
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: chocolate;
+    font-size: 30px;
+}
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: indianred;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: darkred;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+div img {
+    max-width: 300px;
+    max-height: 300px;
+    object-fit: contain;
+    margin-top: 10px;
+    align-items: center;
+}
