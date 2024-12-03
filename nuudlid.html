@@ -7,27 +7,58 @@
     <link rel="stylesheet" type="text/css" href="vaheleht.css">
 </head>
 <body>
+    <div class="topnav">
+        <a href="https://kodu.ut.ee/~sandervalge/leht/veebileht/pealeht.html">Tagasi esilehele</a> 
+      </div>
     <h1>Retseptid</h1>
-    <div>
+    <div id="Kana-nuudlivokk" class="content">
         <h2>Kana-nuudlivokk</h2>
         <p>Koostisosad: 250-300 g kanafileed, 250 g munanuudleid, 1 punane paprika, 250-300 g spargelkapsast, 2 sl rapsiõli, 1 dl vett, 1 sl kalakastet, 1 tl seesamiõli, 4 sl sojakastet, 0.5 sl veiniäädikat, 1 sl riivitud ingverijuurt, 1-2 tl riivitud küüslauku, 2 tl vedelat mett</p>
         <p>Lõika kanafileed õhukesteks ribadeks, puhasta paprika seemnetest ja lõika seejärelvribadeks. Lõika brokoli väikesteks õisikuteks. Keeda munanuudlid vastavalt pakendi juhistele peaaegu pehmeks (ehk siis jäta veidi al dente). Vala keeduvesi ära, loputa nuudlid külma jooksva vee all ning jäta sõelale nõrguma. Sega vürtskastme ained kausis omavahel. Kalla suurele kuumale (vokk)pannile 1 sl rapsiõli. Lisa kanafileeribad ja prae mõned minutid, kuni kanaribad on värvi muutnud. Lisa köögiviljad ning ülejäänud rapsiõli. Prae veel mõni minut segades. Lisa vürtsikaste ja vesi. Lase keskmisel kuumuse mõned minutid haududa, kuni köögiviljad on parajalt pehmed. Lisa pannile nõrutatud nuudlid, sega juurde kalakaste ja seesamiõli. Sega õrnalt, nii et nuudlid kana ja köögiviljadega seguneks.</p>
         <a href="https://nami-nami.ee/retsept/11082/kana_nuudlivokk" target="_blank">Rohkem infot</a>
         <img src="https://nami-nami.ee/files//recipes/11082/munanuudlidpaprikaga.jpg" alt="Image">
     </div>
-    <div>
+    <button class="hideButton" data-target="Kana-nuudlivokk">Peida "Kana-nuudlivokk"</button>
+    <div id="Kana-nuudlisupp" class="content">
         <h2>Kana-nuudlisupp</h2>
         <p>Koostisosad: 2 l (vietnami vm aasiapärast) kanapuljongit, 2,5 dl ribastatud keedetud või grillkana, 2,5 dl katkimurtud peenikesi munanuudleid, 1-1,5 dl hakitud värsket peterselli, maitse järgi musta pipart</p>
         <p>Kuumuta puljong potis keemiseni. Lisa ribastatud kana (sobib nii keedetud kui ka grillitud kana). Lisa potti ka nuudlid ja petersell ning keeda tasasel tulel 10-15 minutit, kuni nuudlid on pehmed. Maitsesta pipraga ja serveeri.</p>
         <a href="https://nami-nami.ee/retsept/8945/kana_nuudlisupp" target="_blank">Rohkem infot</a>
         <img src="https://hips.hearstapps.com/hmg-prod/images/chicken-noodle-soup-index-644c2bec1ce0c.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*" alt="Image">
     </div>
-    <div>
+    <button class="hideButton" data-target="Kana-nuudlisupp">Peida "Kana-nuudlisupp"</button>
+    <div id="Pad Thai nuudlid" class="content">
         <h2>Pad Thai nuudlid</h2>
         <p>Koostisosad: 1 pakk Thai Choice riisinuudleid, 400 g nahata ja kondita kana kintsuliha või kanafileed tükeldatuna, 1 porgand ribadena, 1 punane paprika ribadena, 300 g Hiina kapsast ribadena, 1 muna, Hakitud rohelist sibulat ja idusid, 1 dl maapähkleid jämedalt hakituna, 1-2 sl Thai Choice Sriracha kastet, 2 sl Thai Choice riisiäädikat, 2-3 sl suhkrut, 2 sl Thai Choice sojakastet, 2 sl Thai Choice kalakastet</p>
         <p>Keeda nuudleid vastavalt pakendil toodud juhistele. Sega kokku kastme ained. Kuumuta pannil õli ja pruunista kanaribad õlis. Lisa Hiina kapsa, paprika- ja porgandiribad ja prae pannitäit 1-2 minutit. Klopi muna lahti, nihuta pannitäis servade poole ja libista muna panni keskossa. Lase kiirelt hüübida ja sega siis muna laiali. Lisa pannile ka nuudlid ja kaste. Kuumuta kiiresti läbi. Serveerides puista peale maapähkleid, hakitud rohelist sibulat ja idusid. Serveeri kohe ja serveerides paku juurde sriracha kastet.</p>
         <a href="https://tuuliretseptid.ee/2022/10/pad-thai-nuudlid-kana-ja-koogiviljadega.html/" target="_blank">Rohkem infot</a>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqVPkk3ltS-N8NuI5LqRM7xZCC5kXWs9h0Zg&s" alt="Image">
     </div>
+    <button class="hideButton" data-target="Pad Thai nuudlid">Peida "Pad Thai nuudlid"</button>
 </body>
+<script>
+    /* 
+    JavaScript et kuvada ja peita infot. Interrupt stiilis nagu AARi kohvripraktikumis
+    https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+    https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+    
+    */
+    document.querySelectorAll(".hideButton").forEach(button => { //Selekteerib kõik elemendid, mil on ".hideButton" klass ja itereerib kõiki eraldi
+        button.addEventListener("click", function() { //Event, mis ootab nupu vajutust ja executib funktsiooni interrupt style nagu kohvripraktikumis
+            const nupuId = this.getAttribute("data-target"); //Muutuja vajutatud nupu id-ga
+            const peidetav = document.getElementById(nupuId); //Leiab sama id-ga elemendi
+            //Kontroll kas element on olemas
+            if (peidetav) {
+                //Vaatab kas element on juba peidetud, kui on siis toob selle esile, kui pole siis peidab elemendi
+                if (peidetav.style.display === "none") {
+                    peidetav.style.display = "";
+                    this.textContent = 'Peida "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                } else {
+                    peidetav.style.display = "none";
+                    this.textContent = 'Kuva "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                }
+            }
+        });
+    });
+</script>
 </html>

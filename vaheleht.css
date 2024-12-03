@@ -5,18 +5,7 @@ body {
     display: flex;
     flex-direction: column;
 }
-div {
-    border: 5px solid rgb(72, 36, 36);
-    padding: 20px;
-    width: 80%;
-    box-sizing: border-box;
-    gap: 20px;
-    display: flex;
-    align-items: center;
-    border-radius: 15px;
-    background-color: white;
-    margin-bottom: 10px;
-}
+
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
@@ -26,6 +15,8 @@ h1 {
     outline-style: solid;
     outline-color: brown;
     background-color: rgb(117, 56, 56);
+    border-radius: 15px;
+    padding: 0px 10px;
 }
 
 h2 {
@@ -52,3 +43,61 @@ div img {
     margin-top: 10px;
     align-items: center;
 }
+
+.hideButton {
+    font-size: 16px;
+    background-color: indianred;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.hideButton:hover {
+    background-color: darkred;
+    padding: 12px 26px;
+    transition: padding 0.3s ease;
+}
+.hideButton:not(:hover) {
+    padding: 10px 20px;
+    transition: padding 0.3s ease;
+}
+
+.content {
+    border: 5px solid rgb(72, 36, 36);
+    padding: 20px;
+    width: 80%;
+    box-sizing: border-box;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+/* Taust */
+.topnav {
+    margin-left: 20px;
+    margin-right: auto;
+    background-color: indianred;
+    overflow: hidden;
+    margin-bottom: 10px;
+    padding: 10px 40px;
+    border-radius: 15px;
+  }
+    /* Tekstivärv */
+  .topnav a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+
+  }
+  
+  /* Taust kui hiir peal */
+  .topnav:hover {
+    background-color: darkred;
+
+  }

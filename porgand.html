@@ -7,27 +7,58 @@
     <link rel="stylesheet" type="text/css" href="vaheleht.css">
 </head>
 <body>
+    <div class="topnav">
+        <a href="https://kodu.ut.ee/~sandervalge/leht/veebileht/pealeht.html">Tagasi esilehele</a> 
+    </div>
     <h1>Retseptid</h1>
-    <div>
+    <div id="Korea porgandisalat" class="content">
         <h2>Korea porgandisalat</h2>
         <p>Koostisosad: 400 g porgandit (u 4 suuremat porgandit), 1 suur sibul, 2 küüslauguküünt, 0.5 tl tšillipulbrit või tšillihelbeid, 1 tl uhmris peenestatud koriandriseemneid, 1 tl röstitud seesamiseemneid, 1 sl suhkrut, 0.5 sl veiniäädikat, maitse järgi soola</p>
         <p>Pese ja koori porgandid. Riivi, maitsesta soolaga ning lase 30 minutit tõmmata. Siis loputa külma jooksva vee all ja suru hästi kuivaks. Lõika sibul ribadeks ning prae õlis kuldseks. Jahuta. Haki küüslauk. Maitsesta riivitud porgandid küüslaugu, tšilli, praetud sibula, koriandri- ja seesamiseemnete, suhkru, äädika ja soolaga. Lisa veidike õli.  Sega ning lase tund aega külmkapis maitsestuda.</p>
         <a href="https://nami-nami.ee/retsept/5993/korea_porgandisalat" target="_blank">Rohkem infot</a>
         <img src="https://nami-nami.ee/files//recipes/5993/kaarekoreaporgandisalat.jpg" alt="Image">
     </div>
-    <div>
+    <button class="hideButton" data-target="Korea porgandisalat">Peida "Korea porgandisalat"</button>
+    <div id="Kohupiima-porgandikook" class="content">
         <h2>Kohupiima-porgandikook</h2>
         <p>Koostisosad: 4 muna, 300 g suhkrut, 500 g kohupiima, 500 g hästi peeneks riivitud porgandit, 3 sl vanillisuhkrut, 3 tl küpsetuspulbrit, 3 dl mannat, 2 dl nisujahu, 1 dl piima, 1 dl õli</p>
         <p>Klopi munad suhkruga vahule. Lisa kohupiim ja riivitud porgandid, sega hoolega. Sega jahu, manna, küpsetuspulber ja vanillsuhkur omavahel, siis lisa tainale koos piima ja õliga. Sega ühtlaseks ning kalla tainas 32x24 suurusega küpsetuspaberiga vooderdatud ahjupannile. Küpseta 175-kraadises ahjus 45-50 minutit, kuni koogi keskele torgatud puutikk kuivaks jääb.</p>
         <a href="https://nami-nami.ee/retsept/5532/kohupiima_porgandikook" target="_blank">Rohkem infot</a>
         <img src="https://nami-nami.ee/files//recipes/5532/martiinaporgandikohupiimakarask.jpg" alt="Image">
     </div>
-    <div>
-        <h2></h2>
+    <button class="hideButton" data-target="Kohupiima-porgandikook">Peida "Kohupiima-porgandikook"</button>
+    <div id="Coleslaw" class="content">
+        <h2>Coleslaw</h2>
         <p>Koostisosad: 500 g valget kapsast, 2-3 kooritud porgandit, 1 väike punane sibul, peotäis hakitud värsket peterselli, 3 sl majoneesi (nt Tarplan peakoka majonees), 2 sl maitsestamata jogurtit või hapukoort, 1 tl sinepit (Põltsamaa sinep sobib hästi), soola ja musta pipart</p>
         <p>Lõika kapsas terava noaga või köögikombainis peenikesteks ribadeks. Riivi porgandid jämedalt või lõika tikkudeks (nn julienne). Lõika sibul pooleks ja seejärel õhukesteks viiludeks. Sega aedviljad suures kausis, lisa hakitud petersell. Sega väikeses kausis majonees, hapukoor/jogurt ja sinep omavahel. Sega õrnalt salatiainete hulka, maitsesta soola ja pipraga.</p>
         <a href="https://nami-nami.ee/retsept/7496/coleslaw" target="_blank">Rohkem infot</a>
         <img src="https://nami-nami.ee/files//recipes/7496/porgandikapsasalat.jpg" alt="Image">
     </div>
+    <button class="hideButton" data-target="Coleslaw">Peida "Coleslaw"</button>
 </body>
+<script>
+    /* 
+    JavaScript et kuvada ja peita infot. Interrupt stiilis nagu AARi kohvripraktikumis
+    https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+    https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+    
+    */
+    document.querySelectorAll(".hideButton").forEach(button => { //Selekteerib kõik elemendid, mil on ".hideButton" klass ja itereerib kõiki eraldi
+        button.addEventListener("click", function() { //Event, mis ootab nupu vajutust ja executib funktsiooni interrupt style nagu kohvripraktikumis
+            const nupuId = this.getAttribute("data-target"); //Muutuja vajutatud nupu id-ga
+            const peidetav = document.getElementById(nupuId); //Leiab sama id-ga elemendi
+            //Kontroll kas element on olemas
+            if (peidetav) {
+                //Vaatab kas element on juba peidetud, kui on siis toob selle esile, kui pole siis peidab elemendi
+                if (peidetav.style.display === "none") {
+                    peidetav.style.display = "";
+                    this.textContent = 'Peida "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                } else {
+                    peidetav.style.display = "none";
+                    this.textContent = 'Kuva "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                }
+            }
+        });
+    });
+</script>
 </html>
