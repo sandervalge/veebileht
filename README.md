@@ -1,5 +1,6 @@
-# Retsepti lehekülg (grupp g9NhG)
+# Retsepti Lehekülg
 Sander Valge ja Gris-Markus Reinesberg.
+Rühm: g9NhG
 
 ## Algne idee
 Tahtsime teha veebilehte, kus kasutaja sisestab valitud toiduained ning leht väljastab paar retsepti, mida nende
