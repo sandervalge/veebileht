@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartul</title>
+    <link rel="stylesheet" type="text/css" href="vaheleht.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="https://kodu.ut.ee/~sandervalge/leht/veebileht/pealeht.html">Tagasi esilehele</a> 
+      </div>
+    <h1>Retseptid</h1>
+    <div id="Kartulipuder" class="content">
+        <h2>Kartulipuder</h2>
+        <p>Koostisosad: 1 kg kartulit (nt Laura või Marabel), 2 dl sooja piima, 50 g võid, soola ja musta pipart. </p>
+        <p>Koori ja tükelda kartulid, keeda soolaga maitsestatud vees pehmeks. Vala vesi ära ja lase kartulitel potis veidi auruda. Tambi kartulid pudrunuia abil katki, lisades samal ajal vähehaaval kuuma piima ja tükeldatud või. Klopi puder puulusikaga kohevaks. Maitsesta soola ja pipraga ja serveeri.</p>
+        <a href="https://nami-nami.ee/retsept/870/kartulipuder" target="_blank">Rohkem infot</a>
+        <img src="https://s3-eu-west-1.amazonaws.com/balticsimages/images/320x320/201cd562cb7247879ae3fb3f9158639f.png" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Kartulipuder">Peida "Kartulipuder"</button>
+    <div id="Friikartulid" class="content">
+        <h2>Friikartulid</h2>
+        <p>Koostisosad: 4 suurt kartulit, 1 l päevalilleõli või maapähkliõli või muud sobivat õli, meresoolahelbeid</p>
+        <p>Koori kartulid, lõika pikuti umbes 1 cm viludeks ning seejärel 1 cm laiusteks kangideks. Loputa jooksva külma vee all, et tärklisest lahti saada. Nõruta ja patsuta köögipaberiga kuivaks. Kuumuta sügavas paksupõhjalises pannis õli 130 C - õli võiks olla umbes poole panni sügavuselt. Tõsta umbes pooled kartulikangidest kurnlusika abil õlisse. Sega kergelt läbi, siis küpseta umbes 10 minutit, kuni kartulid on läbi küpsenud, aga mitte pruunistunud. Võta kartulid kurnlusika abil välja ja tõsta köögipaberile tahenema. Küpseta samal moel ka ülejäänud kartulid. (Seda võid teha paar tundi varem). Enne serveermist kuumuta õli 190 C. Tõsta kõik poolenisti küpsetatud kartulid kurnlusika abil kuuma õli sisse ning küpseta 4-5 minutit, kuni kartulid on krõbedad ja kuldpruunid. Tõsta kurnlusikaga õlist välja ja lase köögipaberil veidi taheneda.</p>
+        <a href="https://nami-nami.ee/retsept/3141/kodused_friikartulid" target="_blank">Rohkem infot</a>
+        <img src="https://sausagemaker.com/wp-content/uploads/Homemade-French-Fries_8.jpg" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Friikartulid">Peida "Friikartulid"</button>
+    <div id="Kartulikrõpsud" class="content">
+        <h2>Kartulikrõpsud</h2>
+        <p>Koostisosad: 500 g kartuleid, 3 sl õli, soola, soovi korral muid maitseaineid</p>
+        <p>Viiluta pestud koorega kartulid mandoliiniga umbes 1 mm paksusteks viiludeks. Tõsta suurde kaussi külma veega kaetult pooleks tunniks seisma. Nii eemaldub liigne tärklis. Kuivata kartulid ühe kihina köögipaberi või puhaste köögirätikute vahel. Tõsta suurde kaussi. Sega õliga. Soola lisamine toimub pärast küpsetamist. Laota kartulid ühe kihina küpsetuspaberiga kaetud ahjuplaatidele. Küpseta 200 kraadi juures umbes 25 minutit, kuni kartulid on kuldsed. </p>
+        <a href="https://eestikartul.ee/retseptid/kodused-kartulikropsud/" target="_blank">Rohkem infot</a>
+        <img src="https://eestikartul.ee/wpsite/wp-content/uploads/2014/11/Kodused-kartulikropsud1-384x300.jpg" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Kartulikrõpsud">Peida "Kartulikrõpsud"</button>
+</body>
+<script>
+    /* 
+    JavaScript et kuvada ja peita infot. Interrupt stiilis nagu AARi kohvripraktikumis
+    https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+    https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+    
+    */
+    document.querySelectorAll(".hideButton").forEach(button => { //Selekteerib kõik elemendid, mil on ".hideButton" klass ja itereerib kõiki eraldi
+        button.addEventListener("click", function() { //Event, mis ootab nupu vajutust ja executib funktsiooni interrupt style nagu kohvripraktikumis
+            const nupuId = this.getAttribute("data-target"); //Muutuja vajutatud nupu id-ga
+            const peidetav = document.getElementById(nupuId); //Leiab sama id-ga elemendi
+            //Kontroll kas element on olemas
+            if (peidetav) {
+                //Vaatab kas element on juba peidetud, kui on siis toob selle esile, kui pole siis peidab elemendi
+                if (peidetav.style.display === "none") {
+                    peidetav.style.display = "";
+                    this.textContent = 'Peida "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                } else {
+                    peidetav.style.display = "none";
+                    this.textContent = 'Kuva "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                }
+            }
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkliha</title>
+    <link rel="stylesheet" type="text/css" href="vaheleht.css">
+</head>
+<body>
+    <div class="topnav">
+        <a href="https://kodu.ut.ee/~sandervalge/leht/veebileht/pealeht.html">Tagasi esilehele</a> 
+      </div>
+    <h1>Retseptid</h1>
+    <div id="Kotletid" class="content">
+        <h2>Kotletid</h2>
+        <p>Koostisosad: 3 viilu saia või 1 dl riivsaia, 2 dl vedelikku, nt vett või hapukoort või rõõska koort, 1 hakitud sibul, 400-500 g kodust hakkliha, 1 muna, 1 tl soola, 0.5 tl purustatud musta pipart, maitseaineid omal valikul</p>
+        <p>Pane saiaviilud või riivsai umbes viieks minutiks kaussi vedeliku sisse ligunema. Haki sibul peeneks ja soovi korral prae kergelt väheses õlis. Lisa hakkliha, muna, sibul ja maitseained ning sega ühtlaseks. Vormi saadud tainast märjaks kastetud kätega kotletid ja prae mõõdukal kuumusel kenasti pruuniks.</p>
+        <a href="https://nami-nami.ee/retsept/2709/lihtsad_hakk_kotletid" target="_blank">Rohkem infot</a>
+        <img src="https://i0.wp.com/naine50pluss.ee/wp-content/uploads/2023/01/20180508_194856-1-scaled.jpg" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Kotletid">Peida "Kotletid"</button>
+    <div id="Chilli con Carne" class="content">
+        <h2>Chilli con Carne</h2>
+        <p>Koostisosad: 2 sibulat, 1 küüslauguküüs, Oliiviõli, 2 tl tšillipulbrit, 1 punane tšilli, 1 tl jahvatatud vürtsköömneid, soola ja musta pipart, 400 g hakitud veiseliha või veisehakkliha, 200 g päikesekuivatatud tomateid oliiviõlis, 800 g konservitud purustatud tomateid (ehk kaks 400-grammist konservi), 0.5 kaneelikoort, 800 g punaseid konservube (2 purki)</p>
+        <p>Peenesta sibul ja küüslauk köögikombainis peeneks ning prae väheses oliiviõlis pehmeks. Lisa tšillipulber, tšillipipar, vürtsköömen ja veidi soola ning pipart., Lisa hakitud veiseliha ja pruunista liha pidevalt segades., Peenesta köögikombainis päikesekuivatatud tomatid ja veidi õli (tomatipurgist). Lisa saadud tomatipasta hakklihale. Lisa purustatud tomatid, kaneelikoor ja 1 dl vett. Maitsesta vajadusel soola ja pipraga., Kuumuta keemiseni, kata pott küpsetuspaberiga ja seejärel kaanega. Alanda kuumust ja hauta rooga 1,5 tundi (või hauta 150-kraadises ahjus sama kaua)., Tunni aja pärast lisa nõrutatud konservoad.</p>
+        <a href="https://nami-nami.ee/retsept/2349/jamie_oliveri_chilli_con_carne" target="_blank">Rohkem infot</a>
+        <img src="https://savvybites.co.uk/wp-content/uploads/2020/11/Slow-Cooker-Chilli-Con-Carne-8.jpg" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Chilli con Carne">Peida "Chilli con Carne"</button>
+    <div id="Kodune hakklihakaste" class="content">
+        <h2>Kodune hakklihakaste</h2>
+        <p>Koostisosad: 1 sl võid või õli, 1 sibul, 400-500 g (kodust) hakkliha, 1 sl nisujahu, 5 dl vett või puljongit, 4 sl Saare hapukoort, soola ja musta pipart, hakitud värsket tilli või peterselli</p>
+        <p>Kuumuta pannil või või õli. Lisa hakitud sibul ja prae kergelt läbi. Siis lisa hakkliha ja prae segades, kuni hakkliha on kenasti küps. Maitsesta soola-pipraga. Puista peale nisujahu, sega läbi. Lisa vedelik ning hauta kastet kümmekond minutit. Lõpus sega juurde hapukoor ja soovi korral hakitud maitseroheline.</p>
+        <a href="https://nami-nami.ee/retsept/380/kodune_hakklihakaste" target="_blank">Rohkem infot</a>
+        <img src="https://images.delfi.ee/media-api-image-cropper/v1/26e01d10-b7fe-11eb-b159-3771c74f3634.jpg?noup&w=1200&h=711&ch=0.3744&cw=1&cx=0&cy=0.2784&r=16:9" alt="Image">
+    </div>
+    <button class="hideButton" data-target="Kodune hakklihakaste">Peida "Kodune hakklihakaste"</button>
+</body>
+
+<script>
+    /* 
+    JavaScript et kuvada ja peita infot. Interrupt stiilis nagu AARi kohvripraktikumis
+    https://www.washington.edu/accesscomputing/webd2/student/unit5/module2/lesson5.html
+    https://www.w3schools.com/js/js_htmldom_eventlistener.asp
+    
+    */
+    document.querySelectorAll(".hideButton").forEach(button => { //Selekteerib kõik elemendid, mil on ".hideButton" klass ja itereerib kõiki eraldi
+        button.addEventListener("click", function() { //Event, mis ootab nupu vajutust ja executib funktsiooni interrupt style nagu kohvripraktikumis
+            const nupuId = this.getAttribute("data-target"); //Muutuja vajutatud nupu id-ga
+            const peidetav = document.getElementById(nupuId); //Leiab sama id-ga elemendi
+            //Kontroll kas element on olemas
+            if (peidetav) {
+                //Vaatab kas element on juba peidetud, kui on siis toob selle esile, kui pole siis peidab elemendi
+                if (peidetav.style.display === "none") {
+                    peidetav.style.display = "";
+                    this.textContent = 'Peida "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                } else {
+                    peidetav.style.display = "none";
+                    this.textContent = 'Kuva "' + String(nupuId) + '"'; // Uuendab teksti nupul
+                }
+            }
+        });
+    });
+</script>
+</html>
